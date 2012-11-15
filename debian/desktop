@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=openlase
+Comment=Open realtime laser graphics toolkit
+GenericName=openlase
+Exec=/usr/bin/LaserBoy
+Path=/usr/share/openlase
+Terminal=false
+Icon=openlase
+Categories=Graphics;Science;Engineering
+Type=Application
+MimeType=application/ild;

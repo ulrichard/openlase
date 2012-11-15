@@ -1,0 +1,14 @@
+Source: openlase
+Section: graphics
+Priority: optional
+Maintainer: Richard Ulrich <richi@paraeasy.ch>
+Build-Depends: debhelper (>= 8.0.0), cmake, yasm, libjack-dev, libswscale-dev, libncurses-dev, cython, libavcodec-dev, libavformat-dev, libavdevice-dev
+Standards-Version: 3.9.3
+Homepage: http://http://marcansoft.com/
+
+Package: openlase
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Open realtime laser graphics toolkit. 
+ Open realtime laser graphics toolkit.
+

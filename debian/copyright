@@ -1,0 +1,26 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: openlase
+Source: https://marcansoft.com
+
+Files: *
+Copyright: 2002-2012 Hector Martin
+License: GPL-3+
+
+Files: debian/*
+Copyright: 2012-2012 Richard Ulrich <richi@paraeasy.ch>
+License: GPL-3+
+
+License: GPL-3+
+ openlase is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+ .
+ openlase is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ On Debian systems, the full text of the GNU General Public
+ License version 3 can be found in the file
+ `/usr/share/common-licenses/GPL-3'.
