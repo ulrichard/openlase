@@ -19,23 +19,37 @@
 include_directories (${CMAKE_SOURCE_DIR}/include)
 link_directories (${CMAKE_BINARY_DIR}/libol)
 
-add_executable(playilda playilda.c)
-target_link_libraries(playilda ${JACK_LIBRARIES})
+add_executable(openlase-playilda playilda.c)
+target_link_libraries(openlase-playilda ${JACK_LIBRARIES})
+INSTALL(TARGETS openlase-playilda
+    RUNTIME DESTINATION bin
+    LIBRARY DESTINATION ${LIB_INSTALL_DIR}
+    ARCHIVE DESTINATION ${LIB_INSTALL_DIR})
 
 if(FFMPEG_FOUND)
   include_directories(${FFMPEG_INCLUDE_DIR})
-  add_executable(playvid playvid.c)
-  target_link_libraries(playvid openlase ${FFMPEG_LIBRARIES})
+  add_executable(openlase-playvid playvid.c)
+  target_link_libraries(openlase-playvid openlase ${FFMPEG_LIBRARIES})
+  INSTALL(TARGETS openlase-playvid
+    RUNTIME DESTINATION bin
+    LIBRARY DESTINATION ${LIB_INSTALL_DIR}
+    ARCHIVE DESTINATION ${LIB_INSTALL_DIR})
 else()
   message(STATUS "Will NOT build playvid (FFmpeg missing)")
 endif()
 
 if(OPENGL_FOUND AND GLUT_FOUND)
-  add_executable(simulator simulator.c)
+  add_executable(openlase-simulator simulator.c)
   include_directories(${OPENGL_INCLUDE_DIRS} ${GLUT_INCLUDE_DIRS})
-  target_link_libraries(simulator m ${OPENGL_LIBRARIES} ${GLUT_LIBRARY} ${JACK_LIBRARIES})
+  target_link_libraries(openlase-simulator m ${OPENGL_LIBRARIES} ${GLUT_LIBRARY} ${JACK_LIBRARIES})
+  INSTALL(TARGETS openlase-simulator
+    RUNTIME DESTINATION bin
+    LIBRARY DESTINATION ${LIB_INSTALL_DIR}
+    ARCHIVE DESTINATION ${LIB_INSTALL_DIR})
 else()
   message(STATUS "Will NOT build simulator (OpenGL or GLUT missing)")
 endif()
 
 add_subdirectory(qplayvid)
+
+

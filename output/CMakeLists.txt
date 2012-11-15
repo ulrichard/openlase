@@ -24,8 +24,14 @@ if(QT4_FOUND)
 
   include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
-  add_executable(output output.cpp output_settings.cpp ${output_UIS_H} ${output_MOCS})
-  target_link_libraries(output ${JACK_LIBRARIES} ${QT_LIBRARIES})
+  add_executable(openlase-output output.cpp output_settings.cpp ${output_UIS_H} ${output_MOCS})
+  target_link_libraries(openlase-output ${JACK_LIBRARIES} ${QT_LIBRARIES})
+
+  INSTALL(TARGETS openlase-output
+    RUNTIME DESTINATION bin
+    LIBRARY DESTINATION ${LIB_INSTALL_DIR}
+    ARCHIVE DESTINATION ${LIB_INSTALL_DIR})
 else()
   message(STATUS "Will NOT build output (Qt4 missing)")
 endif()
+

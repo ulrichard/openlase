@@ -23,8 +23,12 @@ if(QT4_FOUND AND FFMPEG_FOUND AND SWSCALE_FOUND)
 
   include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
-  add_executable(qplayvid qplayvid.c qplayvid_gui.cpp ${qplayvid_MOCS})
-  target_link_libraries(qplayvid openlase ${FFMPEG_LIBRARIES} ${SWSCALE_LIBRARIES} ${QT_LIBRARIES})
+  add_executable(openlase-qplayvid qplayvid.c qplayvid_gui.cpp ${qplayvid_MOCS})
+  target_link_libraries(openlase-qplayvid openlase ${FFMPEG_LIBRARIES} ${SWSCALE_LIBRARIES} ${QT_LIBRARIES})
+  INSTALL(TARGETS openlase-qplayvid
+    RUNTIME DESTINATION bin
+    LIBRARY DESTINATION ${LIB_INSTALL_DIR}
+    ARCHIVE DESTINATION ${LIB_INSTALL_DIR})
 else()
   message(STATUS "Will NOT build qplayvid (Qt4 or FFmpeg missing)")
 endif()
