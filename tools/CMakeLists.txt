@@ -30,6 +30,9 @@ if(FFMPEG_FOUND)
   include_directories(${FFMPEG_INCLUDE_DIR})
   add_executable(openlase-playvid playvid.c)
   target_link_libraries(openlase-playvid openlase ${FFMPEG_LIBRARIES})
+  if(APPLE)
+    target_link_libraries(openlase-playvid "-framework CoreFoundation" "-framework VideoDecodeAcceleration" "-framework QuartzCore" bz2 z)
+  endif(APPLE)
   INSTALL(TARGETS openlase-playvid
     RUNTIME DESTINATION bin
     LIBRARY DESTINATION ${LIB_INSTALL_DIR}
