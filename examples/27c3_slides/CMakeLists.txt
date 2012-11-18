@@ -52,7 +52,7 @@ if(CURSES_FOUND AND FFMPEG_FOUND)
   svg2ild(jack-logo)
   svg2ild(output)
 
-  file(GLOB_RECURSE EXAMPLE_FILES *.ilda *.svg)
+  file(GLOB_RECURSE EXAMPLE_FILES *.ild *.svg)
   install(FILES ${EXAMPLE_FILES} DESTINATION ${CMAKE_INSTALL_PREFIX}/share/openlase/examples/)
 else()
   message(STATUS "Will NOT build 27c3_slides (curses or FFmpeg missing)")

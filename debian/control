@@ -2,7 +2,7 @@ Source: openlase
 Section: graphics
 Priority: optional
 Maintainer: Richard Ulrich <richi@paraeasy.ch>
-Build-Depends: debhelper (>= 8.0.0), cmake, yasm, libjack-dev, libswscale-dev, libncurses-dev, cython, libavcodec-dev, libavformat-dev, libavdevice-dev, qt4-qmake, libqt4-dev, libxmu-dev, libxi-dev, 
+Build-Depends: debhelper (>= 8.0.0), cmake, yasm, libjack-dev, libswscale-dev, libncurses-dev, cython, libavcodec-dev, libavformat-dev, libavdevice-dev, qt4-qmake, libqt4-dev, libxmu-dev, libxi-dev, libgl1-mesa-dev | libgl-dev, libglu1-mesa-dev | libglu-dev, freeglut3-dev
 Standards-Version: 3.9.3
 Homepage: http://marcansoft.com/
 
