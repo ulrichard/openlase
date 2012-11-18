@@ -57,3 +57,6 @@ add_subdirectory (output)
 add_subdirectory (tools)
 add_subdirectory (python)
 add_subdirectory (examples)
+
+install(DIRECTORY test_patterns DESTINATION ${CMAKE_INSTALL_PREFIX}/share/openlase/)
+

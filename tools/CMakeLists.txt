@@ -33,7 +33,7 @@ if(FFMPEG_FOUND)
   if(APPLE)
     target_link_libraries(openlase-playvid "-framework CoreFoundation" "-framework VideoDecodeAcceleration" "-framework QuartzCore" bz2 z)
   endif(APPLE)
-  INSTALL(TARGETS openlase-playvid
+  install(TARGETS openlase-playvid
     RUNTIME DESTINATION bin
     LIBRARY DESTINATION ${LIB_INSTALL_DIR}
     ARCHIVE DESTINATION ${LIB_INSTALL_DIR})

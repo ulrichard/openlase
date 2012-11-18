@@ -19,7 +19,7 @@
 if(CURSES_FOUND AND FFMPEG_FOUND)
   include_directories(${CMAKE_SOURCE_DIR}/tools ${CURSES_INCLUDE_DIR} ${FFMPEG_INCLUDE_DIR})
 
-  add_executable(slides
+  add_executable(openlase-slides
     main.c 3ddemos.c static.c metaballs.c circlescope.c avstream.c video.c pong.c
 
     ${CMAKE_CURRENT_BINARY_DIR}/openlase-logo.ild
@@ -28,11 +28,16 @@ if(CURSES_FOUND AND FFMPEG_FOUND)
     ${CMAKE_CURRENT_BINARY_DIR}/output.ild
   )
 
-  target_link_libraries(slides openlase ${FFMPEG_LIBRARIES} ${CURSES_LIBRARIES})
+  target_link_libraries(openlase-slides openlase ${FFMPEG_LIBRARIES} ${CURSES_LIBRARIES})
 
   if(APPLE)
-    target_link_libraries(slides "-framework CoreFoundation" "-framework VideoDecodeAcceleration" "-framework QuartzCore" bz2 z)
+    target_link_libraries(openlase-slides "-framework CoreFoundation" "-framework VideoDecodeAcceleration" "-framework QuartzCore" bz2 z)
   endif(APPLE)
+
+  install(TARGETS openlase-slides
+    RUNTIME DESTINATION bin
+    LIBRARY DESTINATION ${LIB_INSTALL_DIR}
+    ARCHIVE DESTINATION ${LIB_INSTALL_DIR})
 
   function(svg2ild NAME)
     add_custom_command(OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/${NAME}.ild
@@ -46,6 +51,9 @@ if(CURSES_FOUND AND FFMPEG_FOUND)
   svg2ild(27c3-logo)
   svg2ild(jack-logo)
   svg2ild(output)
+
+  file(GLOB_RECURSE EXAMPLE_FILES *.ilda *.svg)
+  install(FILES ${EXAMPLE_FILES} DESTINATION ${CMAKE_INSTALL_PREFIX}/share/openlase/examples/)
 else()
   message(STATUS "Will NOT build 27c3_slides (curses or FFmpeg missing)")
 endif()
