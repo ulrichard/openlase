@@ -8,7 +8,8 @@ Homepage: http://marcansoft.com/
 
 Package: openlase
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: Open realtime laser graphics toolkit. 
- Open realtime laser graphics toolkit.
+Depends: ${shlibs:Depends}, ${misc:Depends}, jackd
+Description: Open realtime laser show graphics toolkit. 
+ Open realtime laser show graphics toolkit.
+ Pipes realtime laser show data through jack to the soundcard.
 
