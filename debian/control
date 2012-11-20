@@ -2,14 +2,41 @@ Source: openlase
 Section: graphics
 Priority: optional
 Maintainer: Richard Ulrich <richi@paraeasy.ch>
-Build-Depends: debhelper (>= 8.0.0), cmake, yasm, libjack-dev, libswscale-dev, libncurses-dev, cython, libavcodec-dev, libavformat-dev, libavdevice-dev, qt4-qmake, libqt4-dev, libxmu-dev, libxi-dev, libgl1-mesa-dev | libgl-dev, libglu1-mesa-dev | libglu-dev, freeglut3-dev
+Build-Depends: debhelper (>= 9.0.0), cmake, yasm, libjack-dev, libswscale-dev, libncurses-dev, cython, libavcodec-dev, libavformat-dev, libavdevice-dev, qt4-qmake, libqt4-dev, libxmu-dev, libxi-dev, libgl1-mesa-dev | libgl-dev, libglu1-mesa-dev | libglu-dev, freeglut3-dev
 Standards-Version: 3.9.3
 Homepage: http://marcansoft.com/
 
-Package: openlase
+Package: libopenlase
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, jackd
-Description: Open realtime laser show graphics toolkit. 
+Description: Open realtime laser show graphics toolkit. Shared library 
  Open realtime laser show graphics toolkit.
  Pipes realtime laser show data through jack to the soundcard.
 
+Package: libopenlase-dev
+Architecture: all
+Depends: ${misc:Depends}, libjack-dev 
+Description: Open realtime laser show graphics toolkit. Header files for the lib 
+ Open realtime laser show graphics toolkit.
+ Pipes realtime laser show data through jack to the soundcard.
+
+Package: python-openlase
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, jackd
+Description: Open realtime laser show graphics toolkit. Python binding 
+ Open realtime laser show graphics toolkit.
+ Pipes realtime laser show data through jack to the soundcard.
+
+Package: openlase-indep
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Open realtime laser show graphics toolkit. Architecture independent files
+ Open realtime laser show graphics toolkit.
+ Pipes realtime laser show data through jack to the soundcard.
+
+Package: openlase
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libopenlase, openlase-indep 
+Description: Open realtime laser show graphics toolkit.
+ Open realtime laser show graphics toolkit.
+ Pipes realtime laser show data through jack to the soundcard.

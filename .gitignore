@@ -1,3 +1,15 @@
 build
 *~
 *.pyc
+debian/files
+debian/*.debhelper.log
+debian/*.substvars
+debian/libopenlase-dev/
+debian/*.postinst.debhelper
+debian/*.postrm.debhelper
+debian/libopenlase/
+debian/openlase-indep/
+debian/openlase/
+debian/python-openlase/
+debian/tmp/
+
