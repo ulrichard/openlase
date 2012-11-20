@@ -1,9 +1,9 @@
-openlase (2012.06.08-4~quantal) quantal; urgency=low
+openlase (2012.06.08-5~quantal) quantal; urgency=low
 
   * added some dependencies to get more built
   * split into multiple packages
 
- -- Richard Ulrich <richi@paraeasy.ch>  Mon, 19 Nov 2012 21:13:04 +0100
+ -- Richard Ulrich <richi@paraeasy.ch>  Mon, 20 Nov 2012 00:06:04 +0100
 
 openlase (2012.06.08-1~quantal) quantal; urgency=low
 
