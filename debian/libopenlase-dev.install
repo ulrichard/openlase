@@ -1,2 +1,3 @@
 /usr/include/openlase/*
+/usr/share/cmake-2.8/Modules/FindOpenLase.cmake
 

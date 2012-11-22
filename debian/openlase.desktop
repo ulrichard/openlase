@@ -1,9 +1,9 @@
 [Desktop Entry]
-Name=openlase
+Name=openlase-simulator
 Comment=Open realtime laser graphics toolkit
-GenericName=openlase
-Exec=/usr/bin/LaserBoy
-Path=/usr/share/openlase
+GenericName=openlase-simulator§
+Exec=/usr/bin/openlase-simulator
+Path=/usr/share/openlase-simulator
 Terminal=false
 Icon=openlase
 Categories=Graphics;Science;Engineering

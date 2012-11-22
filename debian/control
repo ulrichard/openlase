@@ -15,14 +15,14 @@ Description: Open realtime laser show graphics toolkit. Shared library
 
 Package: libopenlase-dev
 Architecture: all
-Depends: ${misc:Depends}, libjack-dev 
+Depends: ${misc:Depends}, libjack-dev, libopenlase 
 Description: Open realtime laser show graphics toolkit. Header files for the lib 
  Open realtime laser show graphics toolkit.
  Pipes realtime laser show data through jack to the soundcard.
 
 Package: python-openlase
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, jackd
+Depends: ${shlibs:Depends}, ${misc:Depends}, libopenlase, python
 Description: Open realtime laser show graphics toolkit. Python binding 
  Open realtime laser show graphics toolkit.
  Pipes realtime laser show data through jack to the soundcard.

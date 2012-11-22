@@ -21,8 +21,10 @@ else()
     LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
   target_link_libraries(pylase openlase)
 
-  INSTALL(TARGETS pylase
+  install(TARGETS pylase
     RUNTIME DESTINATION bin
     LIBRARY DESTINATION ${LIB_INSTALL_DIR}
     ARCHIVE DESTINATION ${LIB_INSTALL_DIR})
+  install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/pylase.pyx DESTINATION ${CMAKE_INSTALL_PREFIX}/share/openlase/python)
+  install(FILES ${CMAKE_CURRENT_BINARY_DIR}/pylase.c   DESTINATION ${CMAKE_INSTALL_PREFIX}/share/openlase/python)
 endif()
