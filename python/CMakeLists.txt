@@ -20,6 +20,11 @@ else()
     OUTPUT_NAME "pylase"
     LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
   target_link_libraries(pylase openlase)
+  SET_TARGET_PROPERTIES(pylase PROPERTIES
+    VERSION ${VERSION_SERIES}.${VERSION_MAJOR}.${VERSION_MINOR}
+    SOVERSION ${openlase_SOVERSION}
+    DEBUG_POSTFIX "d"
+  )
 
   install(TARGETS pylase
     RUNTIME DESTINATION bin

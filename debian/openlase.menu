@@ -1,2 +1,2 @@
-package(openlase):needs="X11" section="Applications/Science/Engineering"\
+?package(openlase):needs="X11" section="Applications/Science/Engineering"\
   title="openlase-simulator" command="/usr/bin/openlase-simulator"

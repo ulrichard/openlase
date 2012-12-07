@@ -27,6 +27,11 @@ if(QT4_FOUND)
   add_executable(openlase-output output.cpp output_settings.cpp ${output_UIS_H} ${output_MOCS})
   target_link_libraries(openlase-output ${JACK_LIBRARIES} ${QT_LIBRARIES})
 
+  SET_TARGET_PROPERTIES(openlase-output PROPERTIES
+    VERSION ${VERSION_SERIES}.${VERSION_MAJOR}.${VERSION_MINOR}
+    DEBUG_POSTFIX "d"
+  )
+
   INSTALL(TARGETS openlase-output
     RUNTIME DESTINATION bin
     LIBRARY DESTINATION ${LIB_INSTALL_DIR}

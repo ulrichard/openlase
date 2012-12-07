@@ -20,6 +20,11 @@ project(openlase)
 
 cmake_minimum_required(VERSION 2.6)
 
+SET(VERSION_SERIES 0)
+SET(VERSION_MAJOR 1)
+SET(VERSION_MINOR 1)
+SET(openlase_SOVERSION 1)
+
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/Modules/")
 # Setup output Directories
 SET(LIB_INSTALL_DIR "lib" CACHE STRING "Default path for libraries within ${CMAKE_INSTALL_PREFIX}")

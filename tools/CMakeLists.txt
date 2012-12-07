@@ -21,6 +21,10 @@ link_directories (${CMAKE_BINARY_DIR}/libol)
 
 add_executable(openlase-playilda playilda.c)
 target_link_libraries(openlase-playilda ${JACK_LIBRARIES})
+SET_TARGET_PROPERTIES(openlase-playilda PROPERTIES
+    VERSION ${VERSION_SERIES}.${VERSION_MAJOR}.${VERSION_MINOR}
+    DEBUG_POSTFIX "d"
+)
 INSTALL(TARGETS openlase-playilda
     RUNTIME DESTINATION bin
     LIBRARY DESTINATION ${LIB_INSTALL_DIR}
@@ -33,6 +37,10 @@ if(FFMPEG_FOUND)
   if(APPLE)
     target_link_libraries(openlase-playvid "-framework CoreFoundation" "-framework VideoDecodeAcceleration" "-framework QuartzCore" bz2 z)
   endif(APPLE)
+  SET_TARGET_PROPERTIES(openlase-playvid PROPERTIES
+    VERSION ${VERSION_SERIES}.${VERSION_MAJOR}.${VERSION_MINOR}
+    DEBUG_POSTFIX "d"
+  )
   install(TARGETS openlase-playvid
     RUNTIME DESTINATION bin
     LIBRARY DESTINATION ${LIB_INSTALL_DIR}
@@ -45,6 +53,10 @@ if(OPENGL_FOUND AND GLUT_FOUND)
   add_executable(openlase-simulator simulator.c)
   include_directories(${OPENGL_INCLUDE_DIRS} ${GLUT_INCLUDE_DIRS})
   target_link_libraries(openlase-simulator m ${OPENGL_LIBRARIES} ${GLUT_LIBRARY} ${JACK_LIBRARIES})
+  SET_TARGET_PROPERTIES(openlase-simulator PROPERTIES
+    VERSION ${VERSION_SERIES}.${VERSION_MAJOR}.${VERSION_MINOR}
+    DEBUG_POSTFIX "d"
+  )
   INSTALL(TARGETS openlase-simulator
     RUNTIME DESTINATION bin
     LIBRARY DESTINATION ${LIB_INSTALL_DIR}

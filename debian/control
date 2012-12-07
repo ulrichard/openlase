@@ -10,33 +10,41 @@ Package: libopenlase
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, jackd
 Description: Open realtime laser show graphics toolkit. Shared library 
- Open realtime laser show graphics toolkit.
- Pipes realtime laser show data through jack to the soundcard.
+ OpenLase is an open realtime laser show graphics toolkit.
+ It pipes realtime laser show data through jack to the soundcard.
+ This package contains the shared library.
 
 Package: libopenlase-dev
 Architecture: all
+Section: libdevel
 Depends: ${misc:Depends}, libjack-dev, libopenlase 
 Description: Open realtime laser show graphics toolkit. Header files for the lib 
- Open realtime laser show graphics toolkit.
- Pipes realtime laser show data through jack to the soundcard.
+ OpenLase is an open realtime laser show graphics toolkit.
+ It pipes realtime laser show data through jack to the soundcard.
+ This is the development package containing the header files for development.
 
 Package: python-openlase
 Architecture: any
+Section: python
 Depends: ${shlibs:Depends}, ${misc:Depends}, libopenlase, python
 Description: Open realtime laser show graphics toolkit. Python binding 
- Open realtime laser show graphics toolkit.
- Pipes realtime laser show data through jack to the soundcard.
+ OpenLase is an open realtime laser show graphics toolkit.
+ It pipes realtime laser show data through jack to the soundcard.
+ This package contains the python bindings for libopenlase.
 
 Package: openlase-indep
 Architecture: all
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Open realtime laser show graphics toolkit. Architecture independent files
- Open realtime laser show graphics toolkit.
- Pipes realtime laser show data through jack to the soundcard.
+ OpenLase is an open realtime laser show graphics toolkit.
+ It pipes realtime laser show data through jack to the soundcard.
+ This package contains achitecture independent files that other packages need.
 
 Package: openlase
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, libopenlase, openlase-indep 
 Description: Open realtime laser show graphics toolkit.
- Open realtime laser show graphics toolkit.
- Pipes realtime laser show data through jack to the soundcard.
+ OpenLase is an open realtime laser show graphics toolkit.
+ It pipes realtime laser show data through jack to the soundcard.
+ This package contains the executables. 
+
