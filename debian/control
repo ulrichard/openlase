@@ -7,7 +7,7 @@ Standards-Version: 3.9.3
 Homepage: http://marcansoft.com/
 
 Package: libopenlase
-Architecture: any
+Architecture: i386 amd64
 Depends: ${shlibs:Depends}, ${misc:Depends}, jackd
 Description: Open realtime laser show graphics toolkit. Shared library 
  OpenLase is an open realtime laser show graphics toolkit.
@@ -15,7 +15,7 @@ Description: Open realtime laser show graphics toolkit. Shared library
  This package contains the shared library.
 
 Package: libopenlase-dev
-Architecture: all
+Architecture: i386 amd64
 Section: libdevel
 Depends: ${misc:Depends}, libjack-dev, libopenlase 
 Description: Open realtime laser show graphics toolkit. Header files for the lib 
@@ -24,7 +24,7 @@ Description: Open realtime laser show graphics toolkit. Header files for the lib
  This is the development package containing the header files for development.
 
 Package: python-openlase
-Architecture: any
+Architecture: i386 amd64
 Section: python
 Depends: ${shlibs:Depends}, ${misc:Depends}, libopenlase, python
 Description: Open realtime laser show graphics toolkit. Python binding 
@@ -33,7 +33,7 @@ Description: Open realtime laser show graphics toolkit. Python binding
  This package contains the python bindings for libopenlase.
 
 Package: openlase-indep
-Architecture: all
+Architecture: i386 amd64
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Open realtime laser show graphics toolkit. Architecture independent files
  OpenLase is an open realtime laser show graphics toolkit.
@@ -41,7 +41,7 @@ Description: Open realtime laser show graphics toolkit. Architecture independent
  This package contains achitecture independent files that other packages need.
 
 Package: openlase
-Architecture: any
+Architecture: i386 amd64
 Depends: ${shlibs:Depends}, ${misc:Depends}, libopenlase, openlase-indep 
 Description: Open realtime laser show graphics toolkit.
  OpenLase is an open realtime laser show graphics toolkit.
